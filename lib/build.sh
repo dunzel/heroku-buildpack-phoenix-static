@@ -21,8 +21,6 @@ load_previous_npm_node_versions() {
 }
 
 download_node() {
-  local node_version=$1
-  local cached_node="$2/node-v${node_version}-linux-x64.tar.gz"
   local platform=linux-x64
 
   if [ ! -f ${cached_node} ]; then
