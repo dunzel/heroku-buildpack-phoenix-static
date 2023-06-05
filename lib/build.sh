@@ -31,6 +31,7 @@ download_node() {
 
     echo "Downloading and installing node $number..."
     local code=$(curl "$url" -L --silent --fail --retry 5 --retry-max-time 15 -o ${cached_node} --write-out "%{http_code}")
+    echo "$url"
     if [ "$code" != "200" ]; then
       echo "Unable to download node: $code" && false
     fi
